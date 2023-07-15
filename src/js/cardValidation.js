@@ -47,20 +47,23 @@ export default class CardValidation {
     e.preventDefault();
     this.typeCart = null;
     this.elementTypeCart = null;
+    if (this.input.classList.contains('valid')) {
+      this.input.classList.remove('valid');
+    }
+    if (this.input.classList.contains('notValid')) {
+      this.input.classList.remove('notValid');
+    }
     if (e.inputType === 'deleteContentBackward') {
       if (this.input.value === '' || this.input.value.length < 2) {
         this.removeStylesElements();
-        this.input.style.background = 'white';
         this.result.textContent = 'Введите пожалуйста номер!';
       } else {
         this.result.textContent = 'Такой тип карты найден! Проверте его на валидность!';
-        this.input.style.background = 'white';
       }
     }
 
     if (e.inputType === 'insertFromPaste') {
       this.removeStylesElements();
-      this.input.style.background = 'white';
       this.selectioObjectn(this.input.value);
     }
 
@@ -104,13 +107,13 @@ export default class CardValidation {
       this.validity = checkLuhn(num);
       if (this.validity) {
         this.result.textContent = 'Карта валидна';
-        this.input.style.background = 'rgba(86 248 119 / 50%)';
+        this.input.classList.add('valid');
         return;
       }
     }
 
     this.result.textContent = 'Карта не валидна!';
-    this.input.style.background = 'rgba(248 86 91 / 50%)';
+    this.input.classList.add('notValid');
   }
 
   addStylesElements() {

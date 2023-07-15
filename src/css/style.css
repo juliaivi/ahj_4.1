@@ -110,19 +110,24 @@ ul {
     background-color: rgb(23 22 22);
 }
 
-
 .result {
     position: relative;
     top: 110px;
 }
-
 
 .active {
     width: 66px;
     height: 66px;
 }
 
-
 .notActive {
     opacity: 0.3;
+}
+
+.valid {
+  background-color: rgba(86 248 119 / 50%);
+}
+
+.notValid {
+  background-color: rgba(248 86 91 / 50%);
 }
