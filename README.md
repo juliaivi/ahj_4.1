@@ -1,7 +1,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/cw80430881m4ghi9?svg=true)](https://ci.appveyor.com/project/juliaivi/ahj-4-1)
 
 # Домашнее задание к занятию "4.Организация тестирования"
-
+https://juliaivi.github.io/ahj_4.1/
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ можно использовать любой менеджер пакетов
